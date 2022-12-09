@@ -19,6 +19,8 @@ public abstract class AoC2022 {
 
     public abstract void part2();
 
+    public abstract Class getClazz();
+
     public void run() {
 
         System.out.println("\n == Day " + getDay() + " == \n");
@@ -28,7 +30,7 @@ public abstract class AoC2022 {
 
     protected List<String> readInput(String filename) {
         try {
-            return Files.readAllLines(Paths.get(this.getClass().getResource(filename).toURI()), Charset.defaultCharset());
+            return Files.readAllLines(Paths.get(getClazz().getResource(filename).toURI()), Charset.defaultCharset());
         } catch (IOException | URISyntaxException e) {
             System.err.println(e);
         }

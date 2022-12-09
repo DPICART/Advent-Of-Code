@@ -10,6 +10,11 @@ import java.util.stream.Collectors;
 public class AoC07 extends AoC2022 {
 
     @Override
+    public Class getClazz() {
+        return this.getClass();
+    }
+
+    @Override
     public int getDay() {
         return 7;
     }

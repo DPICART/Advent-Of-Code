@@ -9,6 +9,7 @@ import fr.daart.ex06.AoC06;
 import fr.daart.ex07.AoC07;
 import fr.daart.ex08.AoC08;
 import fr.daart.ex09.AoC09;
+import fr.daart.ex10.AoC10;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,6 +23,8 @@ public class Main {
         new AoC07().run();
         new AoC08().run();
         new AoC09().run();
+        new AoC10().run();
+
 
     }
 }

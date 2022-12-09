@@ -8,6 +8,11 @@ import java.util.List;
 
 public class AoC03 extends AoC2022 {
 
+    @Override
+    public Class getClazz() {
+        return this.getClass();
+    }
+
     /*
          a - z   A  -  Z
          1 - 26  27 - 52
