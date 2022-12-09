@@ -28,18 +28,14 @@ public class AoC07 extends AoC2022 {
         Dossier root = new Dossier("/", 0, null);
         Dossier currentDir = root;
 
-        for (int i = 0; i < input.size(); i++) {
-            var currentLine = input.get(i);
-
+        for (String currentLine : input) {
             boolean isACmdLine = currentLine.startsWith("$ ");
             if (isACmdLine) {
                 var shortCmd = currentLine.replace("$ ", "");
                 var cmd = shortCmd.split(" ");
                 switch (cmd[0]) {
-                    case "ls":
-                        lastCmd = "ls";
-                        break;
-                    case "cd":
+                    case "ls" -> lastCmd = "ls";
+                    case "cd" -> {
                         if (cmd[1].equals("/")) {
                             currentDir = root;
                         } else if (cmd[1].equals("..")) {
@@ -48,17 +44,14 @@ public class AoC07 extends AoC2022 {
                             currentDir = currentDir.goToDir(cmd[1]);
                         }
                         lastCmd = "cd";
-                        break;
+                    }
                 }
-            } else if (lastCmd.equals("ls")) {
+            } else if ("ls".equals(lastCmd)) {
                 var response = currentLine.split(" ");
-                switch (response[0]) {
-                    case "dir":
-                        currentDir.putDossier(response[1]);
-                        break;
-                    default:
-                        currentDir.putFichier(response[0], response[1]);
-                        break;
+                if (response[0].equals("dir")) {
+                    currentDir.putDossier(response[1]);
+                } else {
+                    currentDir.putFichier(response[0], response[1]);
                 }
             }
         }
@@ -67,7 +60,7 @@ public class AoC07 extends AoC2022 {
 
         List<Dossier> fatDirs = findFatDirs(root);
 
-        var sumThinDirs = fatDirs.stream().map(Dossier::getSize).reduce((a, b) -> a + b).orElse(0L);
+        var sumThinDirs = fatDirs.stream().map(Dossier::getSize).reduce(Long::sum).orElse(0L);
 
         System.out.println("Part 1: " + sumThinDirs);
     }
@@ -81,18 +74,14 @@ public class AoC07 extends AoC2022 {
         Dossier root = new Dossier("/", 0, null);
         Dossier currentDir = root;
 
-        for (int i = 0; i < input.size(); i++) {
-            var currentLine = input.get(i);
-
+        for (String currentLine : input) {
             boolean isACmdLine = currentLine.startsWith("$ ");
             if (isACmdLine) {
                 var shortCmd = currentLine.replace("$ ", "");
                 var cmd = shortCmd.split(" ");
                 switch (cmd[0]) {
-                    case "ls":
-                        lastCmd = "ls";
-                        break;
-                    case "cd":
+                    case "ls" -> lastCmd = "ls";
+                    case "cd" -> {
                         if (cmd[1].equals("/")) {
                             currentDir = root;
                         } else if (cmd[1].equals("..")) {
@@ -101,17 +90,14 @@ public class AoC07 extends AoC2022 {
                             currentDir = currentDir.goToDir(cmd[1]);
                         }
                         lastCmd = "cd";
-                        break;
+                    }
                 }
-            } else if (lastCmd.equals("ls")) {
+            } else if ("ls".equals(lastCmd)) {
                 var response = currentLine.split(" ");
-                switch (response[0]) {
-                    case "dir":
-                        currentDir.putDossier(response[1]);
-                        break;
-                    default:
-                        currentDir.putFichier(response[0], response[1]);
-                        break;
+                if (response[0].equals("dir")) {
+                    currentDir.putDossier(response[1]);
+                } else {
+                    currentDir.putFichier(response[0], response[1]);
                 }
             }
         }
@@ -135,7 +121,7 @@ public class AoC07 extends AoC2022 {
 
         Collection<Dossier> subDirs = currentFolder.getSubDirs();
 
-        List<Dossier> fatSubDirs = subDirs.stream().filter(dossier -> dossier.getSize() < 100000).collect(Collectors.toList());
+        List<Dossier> fatSubDirs = subDirs.stream().filter(dossier -> dossier.getSize() < 100000).toList();
 
         result.addAll(fatSubDirs);
 
@@ -148,21 +134,14 @@ public class AoC07 extends AoC2022 {
     }
 
     private List<Dossier> findDirsBiggerThan(Dossier currentFolder, long maxValue) {
-
         List<Dossier> result = new ArrayList<>();
-
         Collection<Dossier> subDirs = currentFolder.getSubDirs();
-
-        List<Dossier> fatSubDirs = subDirs.stream().filter(dossier -> dossier.getSize() >= maxValue).collect(Collectors.toList());
-
+        List<Dossier> fatSubDirs = subDirs.stream().filter(dossier -> dossier.getSize() >= maxValue).toList();
         result.addAll(fatSubDirs);
-
         for (var subDir : subDirs) {
             result.addAll(findDirsBiggerThan(subDir, maxValue));
         }
-
         return result;
-
     }
 
 }

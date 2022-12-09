@@ -5,13 +5,13 @@ import java.util.Set;
 
 public class CordPart {
 
-    private int order;
+    private final int order;
     private int x;
     private int y;
     private CordPart prev;
     private CordPart next;
 
-    private Set<Point> visited = new HashSet<>();
+    private final Set<Point> visited = new HashSet<>();
 
     public CordPart(int order, int x, int y) {
         this.order = order;

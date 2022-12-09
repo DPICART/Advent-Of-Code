@@ -1,24 +1,18 @@
 package fr.daart.ex07;
 
 public class Fichier {
-
-    private String name;
-    private long size;
-
-    private int depth;
+    private final String name;
+    private final long size;
+    private final int depth;
 
     public Fichier(String name, String size, int depth) {
         this.name = name;
-        this.size = Long.valueOf(size);
+        this.size = Long.parseLong(size);
         this.depth = depth;
     }
 
     @Override
     public String toString() {
-        var sb = new StringBuilder();
-        for (int i = 0; i < depth; i++) {
-            sb.append("\t");
-        }
-        return sb.append("- ").append(name).append(" (file, size=").append(size).append(")").toString();
+        return new StringBuilder().append("\t".repeat(depth)).append("- ").append(name).append(" (file, size=").append(size).append(")").toString();
     }
 }

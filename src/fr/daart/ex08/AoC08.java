@@ -18,14 +18,12 @@ public class AoC08 extends AoC2022 {
 
     @Override
     public void part1() {
-
         var input = readInput("input.txt");
 
         var forest = new ArrayList<Tree>();
         var topTrees = new ArrayList<Tree>();
-        for (int y = 0; y < input.size(); y++) {
+        for (String currentLine : input) {
 
-            var currentLine = input.get(y);
             var splitted = currentLine.split("");
 
             var trees = new ArrayList<Tree>();
@@ -49,11 +47,7 @@ public class AoC08 extends AoC2022 {
         }
 
 
-        var seen = forest.stream().filter(tree -> {
-            var result = tree.canBeSeen();
-            return result;
-        }).toList();
-
+        var seen = forest.stream().filter(Tree::canBeSeen).toList();
 
         System.out.println("Part 1: " + seen.size());
     }
@@ -61,12 +55,10 @@ public class AoC08 extends AoC2022 {
     @Override
     public void part2() {
         var input = readInput("input.txt");
-
         var forest = new ArrayList<Tree>();
         var topTrees = new ArrayList<Tree>();
-        for (int y = 0; y < input.size(); y++) {
+        for (String currentLine : input) {
 
-            var currentLine = input.get(y);
             var splitted = currentLine.split("");
 
             var trees = new ArrayList<Tree>();
@@ -90,17 +82,7 @@ public class AoC08 extends AoC2022 {
         }
 
 
-        var seen = forest.stream().map(tree -> {
-            var result = tree.getScenicScore();
-            return result;
-        }).sorted().toList();
-
-
-//        var winner = forest.get(17);
-//        System.out.println(winner.getTopScore(winner.height, 0));
-//        System.out.println(winner.getLeftScore(winner.height, 0));
-//        System.out.println(winner.getBottomScore(winner.height, 0));
-//        System.out.println(winner.getRightScore(winner.height, 0));
+        var seen = forest.stream().map(Tree::getScenicScore).sorted().toList();
 
         System.out.println("Part 2: " + seen.get(seen.size() - 1));
     }

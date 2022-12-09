@@ -83,7 +83,7 @@ public class AoC06 extends AoC2022 {
 
     private boolean bufferIsASequence2(String[] buffer) {
 
-        return Arrays.asList(buffer).stream().distinct().count() == buffer.length;
+        return Arrays.stream(buffer).distinct().count() == buffer.length;
 
     }
 }

@@ -5,18 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Dossier {
-
-    private String name;
+    private final String name;
     private long sizeFichiers = 0L;
-    private long sizeUnder = 0L;
-
-    private Dossier parent = null;
-
-    private int depth;
-
-    private Map<String, Fichier> fichiers = new HashMap();
-    private Map<String, Dossier> dossiers = new HashMap();
-
+    private Dossier parent;
+    private final int depth;
+    private final Map<String, Fichier> fichiers = new HashMap();
+    private final Map<String, Dossier> dossiers = new HashMap();
 
     public Dossier(String name, int depth, Dossier parent) {
         this.name = name;
@@ -29,7 +23,7 @@ public class Dossier {
             return;
         }
         fichiers.put(fichierName, new Fichier(fichierName, sizeString, depth));
-        var fileSize = Long.valueOf(sizeString);
+        long fileSize = Long.parseLong(sizeString);
         sizeFichiers += fileSize;
     }
 
@@ -48,8 +42,8 @@ public class Dossier {
         return dossiers
                 .values()
                 .stream()
-                .map(d -> d.getSize())
-                .reduce((a, b) -> a + b)
+                .map(Dossier::getSize)
+                .reduce(Long::sum)
                 .orElse(0L);
     }
 
@@ -65,11 +59,9 @@ public class Dossier {
     public String toString() {
         var sb = new StringBuilder();
 
-        for (int i = 0; i < depth; i++) {
-            sb.append("\t");
-        }
-
-        sb.append("- ").append(name).append(" (dir, size=").append(this.getSize()).append(")").append("\n");
+        sb
+                .append("\t".repeat(depth))
+                .append("- ").append(name).append(" (dir, size=").append(this.getSize()).append(")").append("\n");
 
         for (var fi : fichiers.values()) {
             sb.append("\t").append(fi.toString()).append("\n");

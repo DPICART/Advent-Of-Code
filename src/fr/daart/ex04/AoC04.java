@@ -21,8 +21,7 @@ public class AoC04 extends AoC2022 {
         var input = readInput("input.txt");
         var inputSize = input.size();
         int overlapped = 0;
-        for (int i = 0; i < inputSize; i++) {
-            var line = input.get(i);
+        for (String line : input) {
             var ranges = line.split(",");
             boolean overlap = doesOneRangeContainsTheOther(ranges[0], ranges[1]);
             //System.out.println(line + " : " + overlap);
@@ -36,10 +35,8 @@ public class AoC04 extends AoC2022 {
     @Override
     public void part2() {
         var input = readInput("input.txt");
-        var inputSize = input.size();
         int overlapped = 0;
-        for (int i = 0; i < inputSize; i++) {
-            var line = input.get(i);
+        for (String line : input) {
             var ranges = line.split(",");
             var areOverlapping = areOverlapped(ranges[0], ranges[1]);
             //System.out.println(line + " overlapQuantity = " + areOverlapping);
@@ -64,12 +61,8 @@ public class AoC04 extends AoC2022 {
     private boolean doesOneRangeContainsTheOther(String range1String, String range2String) {
         int[] range1 = Arrays.stream(range1String.split("-")).mapToInt(Integer::parseInt).sorted().toArray();
         int[] range2 = Arrays.stream(range2String.split("-")).mapToInt(Integer::parseInt).sorted().toArray();
-        if (range1[0] <= range2[0] && range1[1] >= range2[1]) {
-            return true;
-        } else if (range1[0] >= range2[0] && range1[1] <= range2[1]) {
-            return true;
-        }
-        return false;
+        return (range1[0] <= range2[0] && range1[1] >= range2[1])
+                || (range1[0] >= range2[0] && range1[1] <= range2[1]);
     }
 
 

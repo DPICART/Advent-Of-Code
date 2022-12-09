@@ -35,8 +35,7 @@ public class AoC02 extends AoC2022 {
 
         int totalScore = 0;
 
-        for (int i = 0; i < input.size(); i++) {
-            var line = input.get(i);
+        for (String line : input) {
             var splitted = line.split(" ");
             var ennemy = splitted[0];
             var self = splitted[1];
@@ -54,8 +53,7 @@ public class AoC02 extends AoC2022 {
         var input = readInput("input.txt");
 
         int totalScore = 0;
-        for (int i = 0; i < input.size(); i++) {
-            var line = input.get(i);
+        for (String line : input) {
             var splitted = line.split(" ");
             var ennemy = splitted[0];
             var target = splitted[1];
@@ -79,33 +77,31 @@ public class AoC02 extends AoC2022 {
     private int getFakedScore(String ennemy, String target) {
         int roundPoint = 0;
         int fakePoint = 0;
-        if (target.equals("X")) { // je dois perdre
-            roundPoint = 0;
-            if (ennemy.equals("A")) {
-                fakePoint = 3;
-            } else if (ennemy.equals("B")) {
-                fakePoint = 1;
-            } else if (ennemy.equals("C")) {
-                fakePoint = 2;
+        switch (target) {
+            case "X" -> {  // je dois perdre
+                switch (ennemy) {
+                    case "A" -> fakePoint = 3;
+                    case "B" -> fakePoint = 1;
+                    case "C" -> fakePoint = 2;
+                }
             }
-        } else if (target.equals("Y")) {
-            roundPoint = 3;
-            if (ennemy.equals("A")) {
-                fakePoint = 1;
-            } else if (ennemy.equals("B")) {
-                fakePoint = 2;
-            } else if (ennemy.equals("C")) {
-                fakePoint = 3;
+            case "Y" -> {
+                roundPoint = 3;
+                fakePoint = switch (ennemy) {
+                    case "A" -> 1;
+                    case "B" -> 2;
+                    case "C" -> 3;
+                    default -> fakePoint;
+                };
             }
-        } else if (target.equals("Z")) {
-            roundPoint = 6;
-
-            if (ennemy.equals("A")) {
-                fakePoint = 2;
-            } else if (ennemy.equals("B")) {
-                fakePoint = 3;
-            } else if (ennemy.equals("C")) {
-                fakePoint = 1;
+            case "Z" -> {
+                roundPoint = 6;
+                fakePoint = switch (ennemy) {
+                    case "A" -> 2;
+                    case "B" -> 3;
+                    case "C" -> 1;
+                    default -> fakePoint;
+                };
             }
         }
         return roundPoint + fakePoint;
@@ -118,7 +114,7 @@ public class AoC02 extends AoC2022 {
         int roundPoint = 0;
 
         switch (self) {
-            case "X":
+            case "X" -> {
                 selfPoint = 1;
                 if (ennemy.equals("A")) {
                     // draw
@@ -129,8 +125,8 @@ public class AoC02 extends AoC2022 {
                     // win
                     roundPoint = 6;
                 }
-                break;
-            case "Y":
+            }
+            case "Y" -> {
                 selfPoint = 2;
                 if (ennemy.equals("A")) {
                     // win
@@ -141,8 +137,8 @@ public class AoC02 extends AoC2022 {
                 } else if (ennemy.equals("C")) {
                     // lost
                 }
-                break;
-            case "Z":
+            }
+            case "Z" -> {
                 selfPoint = 3;
                 if (ennemy.equals("A")) {
                     // lost
@@ -153,7 +149,7 @@ public class AoC02 extends AoC2022 {
                     // draw
                     roundPoint = 3;
                 }
-                break;
+            }
         }
 
         return roundPoint + selfPoint;

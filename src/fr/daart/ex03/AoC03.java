@@ -13,18 +13,17 @@ public class AoC03 extends AoC2022 {
         return this.getClass();
     }
 
+    @Override
+    public int getDay() {
+        return 3;
+    }
+
     /*
          a - z   A  -  Z
          1 - 26  27 - 52
         96 - 121 122- 147
         */
-    private String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private List<String> arr = Arrays.stream(characters.split("")).toList();
-
-    @Override
-    public int getDay() {
-        return 3;
-    }
+    private final static List<String> lettersArray = Arrays.stream("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")).toList();
 
     @Override
     public void part1() {
@@ -33,7 +32,7 @@ public class AoC03 extends AoC2022 {
                 .map(value -> {
                     String commonLetter = getCommonLetter(value);
                     //System.out.println(i + " - Common Item: " + commonLetter);
-                    int priority = arr.indexOf(commonLetter);
+                    int priority = lettersArray.indexOf(commonLetter);
                     return priority;
                 })
                 .mapToInt(Integer::intValue)
@@ -57,7 +56,7 @@ public class AoC03 extends AoC2022 {
 
             String commonLetter = getCommonLetter(sack1, sack2, sack3);
             //System.out.println(i + "->" + (i + 2) + " - Common Item: " + commonLetter);
-            int priority = arr.indexOf(commonLetter);
+            int priority = lettersArray.indexOf(commonLetter);
             total += (priority + 1);
         }
 
@@ -74,7 +73,7 @@ public class AoC03 extends AoC2022 {
                 .stream()
                 .filter(item1 -> list2.stream().anyMatch(item2 -> item2.equals(item1)) && list3.stream().anyMatch(item3 -> item3.equals(item1)))
                 .findFirst()
-                .orElseGet(null);
+                .get();
     }
 
 

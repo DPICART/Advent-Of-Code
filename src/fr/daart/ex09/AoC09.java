@@ -28,24 +28,16 @@ public class AoC09 extends AoC2022 {
         }
 
 
-        for (int i = 0; i < input.size(); i++) {
-            var line = input.get(i).split(" ");
+        for (String s : input) {
+            var line = s.split(" ");
 
             int dX = 0;
             int dY = 0;
             switch (line[0]) {
-                case "U":
-                    dY += 1;
-                    break;
-                case "D":
-                    dY -= 1;
-                    break;
-                case "L":
-                    dX -= 1;
-                    break;
-                case "R":
-                    dX += 1;
-                    break;
+                case "U" -> dY += 1;
+                case "D" -> dY -= 1;
+                case "L" -> dX -= 1;
+                case "R" -> dX += 1;
             }
 
             cord.move(Integer.parseInt(line[1]), dX, dY);
@@ -57,38 +49,24 @@ public class AoC09 extends AoC2022 {
 
     @Override
     public void part2() {
-
         var input = readInput("input.txt");
-
         var cord = new CordPart(0, 0, 0);
         var cordLength = 10;
         var currentCord = cord;
-
         for (int i = 0; i < cordLength - 1; i++) {
             currentCord = currentCord.addNext();
         }
 
-
-        for (int i = 0; i < input.size(); i++) {
-            var line = input.get(i).split(" ");
-
+        for (String s : input) {
+            var line = s.split(" ");
             int dX = 0;
             int dY = 0;
             switch (line[0]) {
-                case "U":
-                    dY += 1;
-                    break;
-                case "D":
-                    dY -= 1;
-                    break;
-                case "L":
-                    dX -= 1;
-                    break;
-                case "R":
-                    dX += 1;
-                    break;
+                case "U" -> dY += 1;
+                case "D" -> dY -= 1;
+                case "L" -> dX -= 1;
+                case "R" -> dX += 1;
             }
-
             cord.move(Integer.parseInt(line[1]), dX, dY);
         }
 

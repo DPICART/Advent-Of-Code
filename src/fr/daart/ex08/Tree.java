@@ -1,11 +1,9 @@
 package fr.daart.ex08;
 
 public class Tree {
-
     int height;
-
-    private Tree leftTree;
-    private Tree topTree;
+    private final Tree leftTree;
+    private final Tree topTree;
     private Tree rightTree;
     private Tree bottomTree;
 

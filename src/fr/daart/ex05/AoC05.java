@@ -21,7 +21,6 @@ public class AoC05 extends AoC2022 {
     @Override
     public void part1() {
 
-
         var ship = new LinkedList<String>();
         var moves = new LinkedList<String>();
 
@@ -43,7 +42,6 @@ public class AoC05 extends AoC2022 {
         moveCargoContainers(cargo, moves);
 
         List<String> topContainers = getTopContainers(cargo);
-
 
         System.out.println("Part 1: " + topContainers.toString().replace("[", "").replace("]", "").replace(" ", "").replace(",", ""));
     }
@@ -81,13 +79,10 @@ public class AoC05 extends AoC2022 {
     }
 
     private void moveCargoContainers(Map<Integer, LinkedList<String>> cargo, List<String> moves) {
-
         for (var move : moves) {
             int[] values = getValuesFromMovement(move);
             applyMoveToCargo(cargo, values[0], values[1], values[2]);
-
         }
-
     }
 
     private void applyMoveToCargo(Map<Integer, LinkedList<String>> cargo, int quantity, int sourceIndex, int targetIndex) {
@@ -103,21 +98,18 @@ public class AoC05 extends AoC2022 {
             }
 
         }
-
         cargo.put(sourceIndex - 1, source);
         cargo.put(targetIndex - 1, target);
-
-
     }
 
     private int[] getValuesFromMovement(String move) {
         int[] values = new int[3];
 
-        values[0] = Integer.valueOf(move.split("from")[0].replace("move", "").replace(" ", ""));
+        values[0] = Integer.parseInt(move.split("from")[0].replace("move", "").replace(" ", ""));
         String secondPart = move.split("from")[1];
         var thirdPart = secondPart.split("to");
-        values[1] = Integer.valueOf(thirdPart[0].replace(" ", ""));
-        values[2] = Integer.valueOf(thirdPart[1].replace(" ", ""));
+        values[1] = Integer.parseInt(thirdPart[0].replace(" ", ""));
+        values[2] = Integer.parseInt(thirdPart[1].replace(" ", ""));
 
         return values;
     }
@@ -125,7 +117,7 @@ public class AoC05 extends AoC2022 {
     private Map<Integer, LinkedList<String>> createCargoFromInput(List<String> ship) {
         var newCargo = new HashMap<Integer, LinkedList<String>>();
         var toto = ship.get(ship.size() - 1).replace(" ", "");
-        var cargoWidth = Integer.valueOf(toto.substring(toto.length() - 1, toto.length()));
+        int cargoWidth = Integer.parseInt(toto.substring(toto.length() - 1));
         for (int i = ship.size() - 2; i >= 0; i--) {
             var currentLine = ship.get(i);
             var lineLength = currentLine.length();
@@ -171,7 +163,6 @@ public class AoC05 extends AoC2022 {
 
         cargo.put(sourceIndex - 1, source);
         cargo.put(targetIndex - 1, target);
-
     }
 
 }
