@@ -1,5 +1,6 @@
 package fr.daart;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
@@ -12,9 +13,10 @@ import java.util.stream.Stream;
 public abstract class AoC2022 {
 
     public abstract int getDay();
+
     public abstract void part1();
+
     public abstract void part2();
-    public abstract Class getClazz();
 
     public void run() {
         System.out.println("\n == Day " + getDay() + " == \n");
@@ -48,7 +50,9 @@ public abstract class AoC2022 {
 
     private Path getResourcePath(String filename) {
         try {
-            var resource = getClazz().getResource(filename);
+
+            String pathString = "./ex" + String.format("%02d", getDay()) + "/" + filename;
+            var resource = AoC2022.class.getResource(pathString);
             var uri = resource.toURI();
             return Paths.get(uri);
         } catch (URISyntaxException e) {

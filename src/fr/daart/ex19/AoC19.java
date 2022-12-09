@@ -4,10 +4,6 @@ import fr.daart.AoC2022;
 
 public class AoC19 extends AoC2022 {
 
-    @Override
-    public Class getClazz() {
-        return this.getClass();
-    }
 
     @Override
     public int getDay() {

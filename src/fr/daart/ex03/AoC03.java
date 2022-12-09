@@ -9,11 +9,6 @@ import java.util.List;
 public class AoC03 extends AoC2022 {
 
     @Override
-    public Class getClazz() {
-        return this.getClass();
-    }
-
-    @Override
     public int getDay() {
         return 3;
     }
@@ -29,12 +24,7 @@ public class AoC03 extends AoC2022 {
     public void part1() {
 
         int total = streamInput("input.txt")
-                .map(value -> {
-                    String commonLetter = getCommonLetter(value);
-                    //System.out.println(i + " - Common Item: " + commonLetter);
-                    int priority = lettersArray.indexOf(commonLetter);
-                    return priority;
-                })
+                .map(value -> lettersArray.indexOf(getCommonLetter(value)))
                 .mapToInt(Integer::intValue)
                 .sum();
 

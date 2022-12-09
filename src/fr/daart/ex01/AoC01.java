@@ -6,10 +6,6 @@ import java.util.ArrayList;
 
 public class AoC01 extends AoC2022 {
 
-    @Override
-    public Class getClazz() {
-        return this.getClass();
-    }
 
     @Override
     public int getDay() {

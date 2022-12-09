@@ -7,7 +7,7 @@ import java.util.Map;
 public class Dossier {
     private final String name;
     private long sizeFichiers = 0L;
-    private Dossier parent;
+    private final Dossier parent;
     private final int depth;
     private final Map<String, Fichier> fichiers = new HashMap();
     private final Map<String, Dossier> dossiers = new HashMap();

@@ -4,10 +4,6 @@ import fr.daart.AoC2022;
 
 public class AoC02 extends AoC2022 {
 
-    @Override
-    public Class getClazz() {
-        return this.getClass();
-    }
 
     @Override
     public int getDay() {
@@ -109,51 +105,33 @@ public class AoC02 extends AoC2022 {
 
     private int getSelfScore(String ennemy, String self) {
 
-
         int selfPoint = 0;
         int roundPoint = 0;
 
         switch (self) {
             case "X" -> {
                 selfPoint = 1;
-                if (ennemy.equals("A")) {
-                    // draw
-                    roundPoint = 3;
-                } else if (ennemy.equals("B")) {
-                    // lost
-                } else if (ennemy.equals("C")) {
-                    // win
-                    roundPoint = 6;
+                switch (ennemy) {
+                    case "A" -> roundPoint = 3;
+                    case "C" -> roundPoint = 6;
                 }
             }
             case "Y" -> {
                 selfPoint = 2;
-                if (ennemy.equals("A")) {
-                    // win
-                    roundPoint = 6;
-                } else if (ennemy.equals("B")) {
-                    // draw
-                    roundPoint = 3;
-                } else if (ennemy.equals("C")) {
-                    // lost
+                switch (ennemy) {
+                    case "A" -> roundPoint = 6;
+                    case "B" -> roundPoint = 3;
                 }
             }
             case "Z" -> {
                 selfPoint = 3;
-                if (ennemy.equals("A")) {
-                    // lost
-                } else if (ennemy.equals("B")) {
-                    // win
-                    roundPoint = 6;
-                } else if (ennemy.equals("C")) {
-                    // draw
-                    roundPoint = 3;
+                switch (ennemy) {
+                    case "B" -> roundPoint = 6;
+                    case "C" -> roundPoint = 3;
                 }
             }
         }
 
         return roundPoint + selfPoint;
-
-
     }
 }
