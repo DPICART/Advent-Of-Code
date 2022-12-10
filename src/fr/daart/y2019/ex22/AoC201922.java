@@ -16,7 +16,7 @@ public class AoC201922 extends AoC2019 {
 
 @Override
     public void part2() {
-        var result = "";
-        System.out.println("Part 2: "+result);
+        //var result = "";
+        //System.out.println("Part 2: "+result);
     }
 }

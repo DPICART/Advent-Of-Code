@@ -16,7 +16,7 @@ public class AoC201513 extends AoC2015 {
 
 @Override
     public void part2() {
-        var result = "";
-        System.out.println("Part 2: "+result);
+        //var result = "";
+        //System.out.println("Part 2: "+result);
     }
 }
