@@ -10,4 +10,4 @@ Using Java 17 to solve Advent of Code challenges.
 * [AoC 2018](https://adventofcode.com/2018) - 0 / 50
 * [AoC 2017](https://adventofcode.com/2017) - 0 / 50
 * [AoC 2016](https://adventofcode.com/2016) - 0 / 50
-* [AoC 2015](https://adventofcode.com/2015) - 4 / 50
+* [AoC 2015](https://adventofcode.com/2015) - 6 / 50
