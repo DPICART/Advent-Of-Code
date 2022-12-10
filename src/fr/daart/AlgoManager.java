@@ -1,5 +1,180 @@
 package fr.daart;
 
+import fr.daart.y2015.ex01.AoC201501;
+import fr.daart.y2015.ex02.AoC201502;
+import fr.daart.y2015.ex03.AoC201503;
+import fr.daart.y2015.ex04.AoC201504;
+import fr.daart.y2015.ex05.AoC201505;
+import fr.daart.y2015.ex06.AoC201506;
+import fr.daart.y2015.ex07.AoC201507;
+import fr.daart.y2015.ex08.AoC201508;
+import fr.daart.y2015.ex09.AoC201509;
+import fr.daart.y2015.ex10.AoC201510;
+import fr.daart.y2015.ex11.AoC201511;
+import fr.daart.y2015.ex12.AoC201512;
+import fr.daart.y2015.ex13.AoC201513;
+import fr.daart.y2015.ex14.AoC201514;
+import fr.daart.y2015.ex15.AoC201515;
+import fr.daart.y2015.ex16.AoC201516;
+import fr.daart.y2015.ex17.AoC201517;
+import fr.daart.y2015.ex18.AoC201518;
+import fr.daart.y2015.ex19.AoC201519;
+import fr.daart.y2015.ex20.AoC201520;
+import fr.daart.y2015.ex21.AoC201521;
+import fr.daart.y2015.ex22.AoC201522;
+import fr.daart.y2015.ex23.AoC201523;
+import fr.daart.y2015.ex24.AoC201524;
+import fr.daart.y2015.ex25.AoC201525;
+import fr.daart.y2016.ex01.AoC201601;
+import fr.daart.y2016.ex02.AoC201602;
+import fr.daart.y2016.ex03.AoC201603;
+import fr.daart.y2016.ex04.AoC201604;
+import fr.daart.y2016.ex05.AoC201605;
+import fr.daart.y2016.ex06.AoC201606;
+import fr.daart.y2016.ex07.AoC201607;
+import fr.daart.y2016.ex08.AoC201608;
+import fr.daart.y2016.ex09.AoC201609;
+import fr.daart.y2016.ex10.AoC201610;
+import fr.daart.y2016.ex11.AoC201611;
+import fr.daart.y2016.ex12.AoC201612;
+import fr.daart.y2016.ex13.AoC201613;
+import fr.daart.y2016.ex14.AoC201614;
+import fr.daart.y2016.ex15.AoC201615;
+import fr.daart.y2016.ex16.AoC201616;
+import fr.daart.y2016.ex17.AoC201617;
+import fr.daart.y2016.ex18.AoC201618;
+import fr.daart.y2016.ex19.AoC201619;
+import fr.daart.y2016.ex20.AoC201620;
+import fr.daart.y2016.ex21.AoC201621;
+import fr.daart.y2016.ex22.AoC201622;
+import fr.daart.y2016.ex23.AoC201623;
+import fr.daart.y2016.ex24.AoC201624;
+import fr.daart.y2016.ex25.AoC201625;
+import fr.daart.y2017.ex01.AoC201701;
+import fr.daart.y2017.ex02.AoC201702;
+import fr.daart.y2017.ex03.AoC201703;
+import fr.daart.y2017.ex04.AoC201704;
+import fr.daart.y2017.ex05.AoC201705;
+import fr.daart.y2017.ex06.AoC201706;
+import fr.daart.y2017.ex07.AoC201707;
+import fr.daart.y2017.ex08.AoC201708;
+import fr.daart.y2017.ex09.AoC201709;
+import fr.daart.y2017.ex10.AoC201710;
+import fr.daart.y2017.ex11.AoC201711;
+import fr.daart.y2017.ex12.AoC201712;
+import fr.daart.y2017.ex13.AoC201713;
+import fr.daart.y2017.ex14.AoC201714;
+import fr.daart.y2017.ex15.AoC201715;
+import fr.daart.y2017.ex16.AoC201716;
+import fr.daart.y2017.ex17.AoC201717;
+import fr.daart.y2017.ex18.AoC201718;
+import fr.daart.y2017.ex19.AoC201719;
+import fr.daart.y2017.ex20.AoC201720;
+import fr.daart.y2017.ex21.AoC201721;
+import fr.daart.y2017.ex22.AoC201722;
+import fr.daart.y2017.ex23.AoC201723;
+import fr.daart.y2017.ex24.AoC201724;
+import fr.daart.y2017.ex25.AoC201725;
+import fr.daart.y2018.ex01.AoC201801;
+import fr.daart.y2018.ex02.AoC201802;
+import fr.daart.y2018.ex03.AoC201803;
+import fr.daart.y2018.ex04.AoC201804;
+import fr.daart.y2018.ex05.AoC201805;
+import fr.daart.y2018.ex06.AoC201806;
+import fr.daart.y2018.ex07.AoC201807;
+import fr.daart.y2018.ex08.AoC201808;
+import fr.daart.y2018.ex09.AoC201809;
+import fr.daart.y2018.ex10.AoC201810;
+import fr.daart.y2018.ex11.AoC201811;
+import fr.daart.y2018.ex12.AoC201812;
+import fr.daart.y2018.ex13.AoC201813;
+import fr.daart.y2018.ex14.AoC201814;
+import fr.daart.y2018.ex15.AoC201815;
+import fr.daart.y2018.ex16.AoC201816;
+import fr.daart.y2018.ex17.AoC201817;
+import fr.daart.y2018.ex18.AoC201818;
+import fr.daart.y2018.ex19.AoC201819;
+import fr.daart.y2018.ex20.AoC201820;
+import fr.daart.y2018.ex21.AoC201821;
+import fr.daart.y2018.ex22.AoC201822;
+import fr.daart.y2018.ex23.AoC201823;
+import fr.daart.y2018.ex24.AoC201824;
+import fr.daart.y2018.ex25.AoC201825;
+import fr.daart.y2019.ex01.AoC201901;
+import fr.daart.y2019.ex02.AoC201902;
+import fr.daart.y2019.ex03.AoC201903;
+import fr.daart.y2019.ex04.AoC201904;
+import fr.daart.y2019.ex05.AoC201905;
+import fr.daart.y2019.ex06.AoC201906;
+import fr.daart.y2019.ex07.AoC201907;
+import fr.daart.y2019.ex08.AoC201908;
+import fr.daart.y2019.ex09.AoC201909;
+import fr.daart.y2019.ex10.AoC201910;
+import fr.daart.y2019.ex11.AoC201911;
+import fr.daart.y2019.ex12.AoC201912;
+import fr.daart.y2019.ex13.AoC201913;
+import fr.daart.y2019.ex14.AoC201914;
+import fr.daart.y2019.ex15.AoC201915;
+import fr.daart.y2019.ex16.AoC201916;
+import fr.daart.y2019.ex17.AoC201917;
+import fr.daart.y2019.ex18.AoC201918;
+import fr.daart.y2019.ex19.AoC201919;
+import fr.daart.y2019.ex20.AoC201920;
+import fr.daart.y2019.ex21.AoC201921;
+import fr.daart.y2019.ex22.AoC201922;
+import fr.daart.y2019.ex23.AoC201923;
+import fr.daart.y2019.ex24.AoC201924;
+import fr.daart.y2019.ex25.AoC201925;
+import fr.daart.y2020.ex01.AoC202001;
+import fr.daart.y2020.ex02.AoC202002;
+import fr.daart.y2020.ex03.AoC202003;
+import fr.daart.y2020.ex04.AoC202004;
+import fr.daart.y2020.ex05.AoC202005;
+import fr.daart.y2020.ex06.AoC202006;
+import fr.daart.y2020.ex07.AoC202007;
+import fr.daart.y2020.ex08.AoC202008;
+import fr.daart.y2020.ex09.AoC202009;
+import fr.daart.y2020.ex10.AoC202010;
+import fr.daart.y2020.ex11.AoC202011;
+import fr.daart.y2020.ex12.AoC202012;
+import fr.daart.y2020.ex13.AoC202013;
+import fr.daart.y2020.ex14.AoC202014;
+import fr.daart.y2020.ex15.AoC202015;
+import fr.daart.y2020.ex16.AoC202016;
+import fr.daart.y2020.ex17.AoC202017;
+import fr.daart.y2020.ex18.AoC202018;
+import fr.daart.y2020.ex19.AoC202019;
+import fr.daart.y2020.ex20.AoC202020;
+import fr.daart.y2020.ex21.AoC202021;
+import fr.daart.y2020.ex22.AoC202022;
+import fr.daart.y2020.ex23.AoC202023;
+import fr.daart.y2020.ex24.AoC202024;
+import fr.daart.y2020.ex25.AoC202025;
+import fr.daart.y2021.ex01.AoC202101;
+import fr.daart.y2021.ex02.AoC202102;
+import fr.daart.y2021.ex03.AoC202103;
+import fr.daart.y2021.ex04.AoC202104;
+import fr.daart.y2021.ex05.AoC202105;
+import fr.daart.y2021.ex06.AoC202106;
+import fr.daart.y2021.ex07.AoC202107;
+import fr.daart.y2021.ex08.AoC202108;
+import fr.daart.y2021.ex09.AoC202109;
+import fr.daart.y2021.ex10.AoC202110;
+import fr.daart.y2021.ex11.AoC202111;
+import fr.daart.y2021.ex12.AoC202112;
+import fr.daart.y2021.ex13.AoC202113;
+import fr.daart.y2021.ex14.AoC202114;
+import fr.daart.y2021.ex15.AoC202115;
+import fr.daart.y2021.ex16.AoC202116;
+import fr.daart.y2021.ex17.AoC202117;
+import fr.daart.y2021.ex18.AoC202118;
+import fr.daart.y2021.ex19.AoC202119;
+import fr.daart.y2021.ex20.AoC202120;
+import fr.daart.y2021.ex21.AoC202121;
+import fr.daart.y2021.ex22.AoC202122;
+import fr.daart.y2021.ex23.AoC202123;
+import fr.daart.y2021.ex24.AoC202124;
+import fr.daart.y2021.ex25.AoC202125;
 import fr.daart.y2022.ex01.AoC202201;
 import fr.daart.y2022.ex02.AoC202202;
 import fr.daart.y2022.ex03.AoC202203;
@@ -31,6 +206,223 @@ public class AlgoManager {
     public static void run(int year, int day) {
 
         switch (year) {
+            case 2015:
+                switch (day) {
+                    case 1 -> new AoC201501().run();
+                    case 2 -> new AoC201502().run();
+                    case 3 -> new AoC201503().run();
+                    case 4 -> new AoC201504().run();
+                    case 5 -> new AoC201505().run();
+                    case 6 -> new AoC201506().run();
+                    case 7 -> new AoC201507().run();
+                    case 8 -> new AoC201508().run();
+                    case 9 -> new AoC201509().run();
+                    case 10 -> new AoC201510().run();
+                    case 11 -> new AoC201511().run();
+                    case 12 -> new AoC201512().run();
+                    case 13 -> new AoC201513().run();
+                    case 14 -> new AoC201514().run();
+                    case 15 -> new AoC201515().run();
+                    case 16 -> new AoC201516().run();
+                    case 17 -> new AoC201517().run();
+                    case 18 -> new AoC201518().run();
+                    case 19 -> new AoC201519().run();
+                    case 20 -> new AoC201520().run();
+                    case 21 -> new AoC201521().run();
+                    case 22 -> new AoC201522().run();
+                    case 23 -> new AoC201523().run();
+                    case 24 -> new AoC201524().run();
+                    case 25 -> new AoC201525().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
+            case 2016:
+                switch (day) {
+                    case 1 -> new AoC201601().run();
+                    case 2 -> new AoC201602().run();
+                    case 3 -> new AoC201603().run();
+                    case 4 -> new AoC201604().run();
+                    case 5 -> new AoC201605().run();
+                    case 6 -> new AoC201606().run();
+                    case 7 -> new AoC201607().run();
+                    case 8 -> new AoC201608().run();
+                    case 9 -> new AoC201609().run();
+                    case 10 -> new AoC201610().run();
+                    case 11 -> new AoC201611().run();
+                    case 12 -> new AoC201612().run();
+                    case 13 -> new AoC201613().run();
+                    case 14 -> new AoC201614().run();
+                    case 15 -> new AoC201615().run();
+                    case 16 -> new AoC201616().run();
+                    case 17 -> new AoC201617().run();
+                    case 18 -> new AoC201618().run();
+                    case 19 -> new AoC201619().run();
+                    case 20 -> new AoC201620().run();
+                    case 21 -> new AoC201621().run();
+                    case 22 -> new AoC201622().run();
+                    case 23 -> new AoC201623().run();
+                    case 24 -> new AoC201624().run();
+                    case 25 -> new AoC201625().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
+            case 2017:
+                switch (day) {
+                    case 1 -> new AoC201701().run();
+                    case 2 -> new AoC201702().run();
+                    case 3 -> new AoC201703().run();
+                    case 4 -> new AoC201704().run();
+                    case 5 -> new AoC201705().run();
+                    case 6 -> new AoC201706().run();
+                    case 7 -> new AoC201707().run();
+                    case 8 -> new AoC201708().run();
+                    case 9 -> new AoC201709().run();
+                    case 10 -> new AoC201710().run();
+                    case 11 -> new AoC201711().run();
+                    case 12 -> new AoC201712().run();
+                    case 13 -> new AoC201713().run();
+                    case 14 -> new AoC201714().run();
+                    case 15 -> new AoC201715().run();
+                    case 16 -> new AoC201716().run();
+                    case 17 -> new AoC201717().run();
+                    case 18 -> new AoC201718().run();
+                    case 19 -> new AoC201719().run();
+                    case 20 -> new AoC201720().run();
+                    case 21 -> new AoC201721().run();
+                    case 22 -> new AoC201722().run();
+                    case 23 -> new AoC201723().run();
+                    case 24 -> new AoC201724().run();
+                    case 25 -> new AoC201725().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
+            case 2018:
+                switch (day) {
+                    case 1 -> new AoC201801().run();
+                    case 2 -> new AoC201802().run();
+                    case 3 -> new AoC201803().run();
+                    case 4 -> new AoC201804().run();
+                    case 5 -> new AoC201805().run();
+                    case 6 -> new AoC201806().run();
+                    case 7 -> new AoC201807().run();
+                    case 8 -> new AoC201808().run();
+                    case 9 -> new AoC201809().run();
+                    case 10 -> new AoC201810().run();
+                    case 11 -> new AoC201811().run();
+                    case 12 -> new AoC201812().run();
+                    case 13 -> new AoC201813().run();
+                    case 14 -> new AoC201814().run();
+                    case 15 -> new AoC201815().run();
+                    case 16 -> new AoC201816().run();
+                    case 17 -> new AoC201817().run();
+                    case 18 -> new AoC201818().run();
+                    case 19 -> new AoC201819().run();
+                    case 20 -> new AoC201820().run();
+                    case 21 -> new AoC201821().run();
+                    case 22 -> new AoC201822().run();
+                    case 23 -> new AoC201823().run();
+                    case 24 -> new AoC201824().run();
+                    case 25 -> new AoC201825().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
+            case 2019:
+                switch (day) {
+                    case 1 -> new AoC201901().run();
+                    case 2 -> new AoC201902().run();
+                    case 3 -> new AoC201903().run();
+                    case 4 -> new AoC201904().run();
+                    case 5 -> new AoC201905().run();
+                    case 6 -> new AoC201906().run();
+                    case 7 -> new AoC201907().run();
+                    case 8 -> new AoC201908().run();
+                    case 9 -> new AoC201909().run();
+                    case 10 -> new AoC201910().run();
+                    case 11 -> new AoC201911().run();
+                    case 12 -> new AoC201912().run();
+                    case 13 -> new AoC201913().run();
+                    case 14 -> new AoC201914().run();
+                    case 15 -> new AoC201915().run();
+                    case 16 -> new AoC201916().run();
+                    case 17 -> new AoC201917().run();
+                    case 18 -> new AoC201918().run();
+                    case 19 -> new AoC201919().run();
+                    case 20 -> new AoC201920().run();
+                    case 21 -> new AoC201921().run();
+                    case 22 -> new AoC201922().run();
+                    case 23 -> new AoC201923().run();
+                    case 24 -> new AoC201924().run();
+                    case 25 -> new AoC201925().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
+            case 2020:
+                switch (day) {
+                    case 1 -> new AoC202001().run();
+                    case 2 -> new AoC202002().run();
+                    case 3 -> new AoC202003().run();
+                    case 4 -> new AoC202004().run();
+                    case 5 -> new AoC202005().run();
+                    case 6 -> new AoC202006().run();
+                    case 7 -> new AoC202007().run();
+                    case 8 -> new AoC202008().run();
+                    case 9 -> new AoC202009().run();
+                    case 10 -> new AoC202010().run();
+                    case 11 -> new AoC202011().run();
+                    case 12 -> new AoC202012().run();
+                    case 13 -> new AoC202013().run();
+                    case 14 -> new AoC202014().run();
+                    case 15 -> new AoC202015().run();
+                    case 16 -> new AoC202016().run();
+                    case 17 -> new AoC202017().run();
+                    case 18 -> new AoC202018().run();
+                    case 19 -> new AoC202019().run();
+                    case 20 -> new AoC202020().run();
+                    case 21 -> new AoC202021().run();
+                    case 22 -> new AoC202022().run();
+                    case 23 -> new AoC202023().run();
+                    case 24 -> new AoC202024().run();
+                    case 25 -> new AoC202025().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
+            case 2021:
+                switch (day) {
+                    case 1 -> new AoC202101().run();
+                    case 2 -> new AoC202102().run();
+                    case 3 -> new AoC202103().run();
+                    case 4 -> new AoC202104().run();
+                    case 5 -> new AoC202105().run();
+                    case 6 -> new AoC202106().run();
+                    case 7 -> new AoC202107().run();
+                    case 8 -> new AoC202108().run();
+                    case 9 -> new AoC202109().run();
+                    case 10 -> new AoC202110().run();
+                    case 11 -> new AoC202111().run();
+                    case 12 -> new AoC202112().run();
+                    case 13 -> new AoC202113().run();
+                    case 14 -> new AoC202114().run();
+                    case 15 -> new AoC202115().run();
+                    case 16 -> new AoC202116().run();
+                    case 17 -> new AoC202117().run();
+                    case 18 -> new AoC202118().run();
+                    case 19 -> new AoC202119().run();
+                    case 20 -> new AoC202120().run();
+                    case 21 -> new AoC202121().run();
+                    case 22 -> new AoC202122().run();
+                    case 23 -> new AoC202123().run();
+                    case 24 -> new AoC202124().run();
+                    case 25 -> new AoC202125().run();
+                    default -> throw new IllegalArgumentException("This day is not covered");
+                }
+                break;
+
             case 2022:
                 switch (day) {
                     case 1 -> new AoC202201().run();
@@ -61,6 +453,7 @@ public class AlgoManager {
                     default -> throw new IllegalArgumentException("This day is not covered");
                 }
                 break;
+
             default:
                 throw new IllegalArgumentException("This year is not covered");
         }

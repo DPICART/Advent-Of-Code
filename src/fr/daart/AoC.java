@@ -1,9 +1,11 @@
 package fr.daart;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -18,12 +20,22 @@ public abstract class AoC {
     public abstract void part2();
 
     public void run() {
-        System.out.println("\n == AoC" + getYear() + " Day #" + getDay() + " == \n");
+        System.out.println("\n##### AoC" + getYear() + " Day n°" + getDay() + " #####");
         part1();
         part2();
     }
 
-    protected abstract Path getResourcePath(String filename);
+    protected Path getResourcePath(String filename) {
+        try {
+
+            String pathString = "./y" + getYear() + "/ex" + String.format("%02d", getDay()) + "/" + filename;
+            var resource = AoC.class.getResource(pathString);
+            var uri = resource.toURI();
+            return Paths.get(uri);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     protected List<String> readInput(String filename) {
         try {
