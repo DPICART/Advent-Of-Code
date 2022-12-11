@@ -6,7 +6,7 @@ public class Main {
         // 2015 - 5
         // 2022 - 11
 
-        AlgoManager.run(2022, 11);
+        AlgoManager.run(2015, 6);
 
     }
 }

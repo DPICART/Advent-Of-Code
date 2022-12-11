@@ -10,4 +10,4 @@ Using Java 17 to solve Advent of Code challenges.
 * [Advent Of Code 2018](https://adventofcode.com/2018) - 00/25
 * [Advent Of Code 2017](https://adventofcode.com/2017) - 00/25
 * [Advent Of Code 2016](https://adventofcode.com/2016) - 00/25
-* [Advent Of Code 2015](https://adventofcode.com/2015) - 05/25 🚧
+* [Advent Of Code 2015](https://adventofcode.com/2015) - 06/25 🚧
