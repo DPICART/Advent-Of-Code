@@ -3,10 +3,10 @@ package fr.daart;
 public class Main {
     public static void main(String[] args) {
 
-        int year = 2015;
-        int day = 4;
+        // 2015 - 5
+        // 2022 - 11
 
-        AlgoManager.run(year, day);
+        AlgoManager.run(2022, 11);
 
     }
 }

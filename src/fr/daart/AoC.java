@@ -20,7 +20,9 @@ public abstract class AoC {
     public abstract void part2();
 
     public void run() {
-        System.out.println("\n##### AoC" + getYear() + " Day n°" + getDay() + " #####");
+        System.out.println(String.format("\n############ AoC %s Day n°%s ############", getYear(), getDay()));
+        System.out.println(String.format("https://adventofcode.com/%s/day/%s", getYear(), getDay()));
+        System.out.println(String.format("https://adventofcode.com/%s/day/%s/input", getYear(), getDay()));
         part1();
         part2();
     }
