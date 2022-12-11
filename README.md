@@ -3,11 +3,11 @@
 Using Java 17 to solve Advent of Code challenges.
 
 
-* [AoC 2022](https://adventofcode.com/2022) - 22 / 50
-* [AoC 2021](https://adventofcode.com/2021) - 0 / 50
-* [AoC 2020](https://adventofcode.com/2020) - 0 / 50
-* [AoC 2019](https://adventofcode.com/2019) - 0 / 50
-* [AoC 2018](https://adventofcode.com/2018) - 0 / 50
-* [AoC 2017](https://adventofcode.com/2017) - 0 / 50
-* [AoC 2016](https://adventofcode.com/2016) - 0 / 50
-* [AoC 2015](https://adventofcode.com/2015) - 8 / 50
+* [Advent Of Code 2022](https://adventofcode.com/2022) - 11/25 🚧
+* [Advent Of Code 2021](https://adventofcode.com/2021) - 00/25
+* [Advent Of Code 2020](https://adventofcode.com/2020) - 00/25
+* [Advent Of Code 2019](https://adventofcode.com/2019) - 00/25
+* [Advent Of Code 2018](https://adventofcode.com/2018) - 00/25
+* [Advent Of Code 2017](https://adventofcode.com/2017) - 00/25
+* [Advent Of Code 2016](https://adventofcode.com/2016) - 00/25
+* [Advent Of Code 2015](https://adventofcode.com/2015) - 05/25 🚧
